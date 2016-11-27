@@ -1,15 +1,7 @@
-<?php
-
-defined( '_JEXEC' ) or die( 'Restricted access' );
-?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 
 <head>
-        <?php
-      $this->setGenerator('');
-        ?>
-        <jdoc:include type="head" />
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,10 +12,10 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
     <title>SpaceSharing</title>
 
     <!-- Bootstrap Core CSS -->
-    <link type="text/css" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link type="text/css" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/custom_style.css" rel="stylesheet">
+    <link href="css/custom_style.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -38,15 +30,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 </head>
 
-<?php
-  $itemid = JRequest::getVar('Itemid');
-  $menu = &JSite::getMenu();
-  $active = $menu->getItem($itemid);
-  $params = $menu->getParams( $active->id );
-  $pageclass = $params->get( 'pageclass_sfx' );
-?>
-
-<body id="page-top" class="index <?php if($pageclass): echo $pageclass; endif;?>">
+<body id="page-top" class="index">
 
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
@@ -61,7 +45,20 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<jdoc:include type="modules" name="position-7" style="none" />
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#">Menu1</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#">Menu2</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#">Menu3</a>
+                    </li>
+                </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -90,8 +87,13 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 					<p>Text  Text Text Text Text Text Text Text</p>
                 </div>
 				<div class="col-lg-9 text-center" style="background-color:red">
-                    <h2><jdoc:include type="modules" name="position-3" style="none" /></h2>
-					<p><jdoc:include type="modules" name="content" style="none" /></p>
+                    <h2>Portfolio</h2>
+					<p>Text  Text Text Text Text Text Text Text</p>
+					<p>Text  Text Text Text Text Text Text Text</p>
+					<p>Text  Text Text Text Text Text Text Text</p>
+					<p>Text  Text Text Text Text Text Text Text</p>
+					<p>Text  Text Text Text Text Text Text Text</p>
+					<p>Text  Text Text Text Text Text Text Text</p>
                 </div>
             </div>
             
