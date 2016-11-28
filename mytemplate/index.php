@@ -38,13 +38,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 </head>
 
-<?php
-  $itemid = JRequest::getVar('Itemid');
-  $menu = &JSite::getMenu();
-  $active = $menu->getItem($itemid);
-  $params = $menu->getParams( $active->id );
-  $pageclass = $params->get( 'pageclass_sfx' );
-?>
+
 
 <body id="page-top" class="index <?php if($pageclass): echo $pageclass; endif;?>">
 
@@ -68,7 +62,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
         <!-- /.container-fluid -->
     </nav>
 
-    <!-- Header -->
+    <!-- Header 
     <header>
         <div class="container">
             <div class="row">
@@ -79,7 +73,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
                 </div>
             </div>
         </div>
-    </header>
+    </header> -->
 
     <!-- Main -->
     <section id="main">
@@ -91,6 +85,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
                 </div>
 				<div class="col-lg-9 text-center" style="background-color:red">
                     <h2><jdoc:include type="modules" name="position-3" style="none" /></h2>
+					<jdoc:include type="component" />
 					<p><jdoc:include type="modules" name="content" style="none" /></p>
                 </div>
             </div>
